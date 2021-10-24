@@ -1,0 +1,27 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+  padding: 10px 15px;
+  transition: box-shadow 0.4s ease-in-out;
+  background-color: rgb(253, 243, 243);
+  min-width: 200px;
+  align-items: center;
+
+  &:hover {
+    box-shadow: 2px 6px 10px rgb(245, 145, 215);
+  }
+}
+
+.conjuntos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 5px;
+}
+
+.nombreConjunto {
+  font-size: medium;
+  font-family: poppins;
+}
