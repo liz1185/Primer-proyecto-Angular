@@ -1,9 +1,14 @@
 <h3>Conjuntos</h3>
 
 <div class="conjuntos">
-  <div class="product" *ngFor="let product of products">
-    <h2 class="nombreConjunto">
-      {{ product.description }}
-    </h2>
+  <div class="product" *ngFor="let product of filteredProducts">
+    <div *ngIf="product.description">
+      <h2 class="nombreConjunto">
+        {{ product.description }}
+      </h2>
+
+      <p *ngIf="product.price" class="price">${{ product.price }}</p>
+      <p *ngIf="!product.price" class="price">*</p>
+    </div>
   </div>
 </div>

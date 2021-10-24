@@ -10,6 +10,7 @@ export class ProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.filteredProducts)
   }
 
   products= [
@@ -19,7 +20,10 @@ export class ProductsComponent implements OnInit {
   {id:4, description:"Conjunto Isa", Talle: 85, price:1200},
   {id:5, description:"Conjunto Meli", Talle: 85, price:1200},
   {id:6, description:"Conjunto Teens", Talle: 85, price:1200},
+  {id:null, description:null, talle: null, price: null},
 
   ]
 
+  filteredProducts=this.products.filter((product)=>product.description);
 }
+
